@@ -1,4 +1,6 @@
 # -*- encoding: utf-8 -*-
+$:.push File.expand_path("../lib", __FILE__)
+
 Gem::Specification.new do |s|
   s.name        = "false_destroy"
   s.version     = "0.1.0"
@@ -10,6 +12,9 @@ Gem::Specification.new do |s|
   s.description = "when mark a record deleted in DB, then run callback after_false_destroy like after_destroy in rails"
 
   s.required_rubygems_version = ">= 1.3.6"
+  s.add_dependency("active_record")
+  s.add_dependency("active_model")
+  s.add_dependency("rails")
   s.add_development_dependency("rspec")
 
   s.files         = Dir['README.md', 'VERSION', 'LICENSE.txt', 'Rakefile', 'lib/**/*']

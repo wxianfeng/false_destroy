@@ -1,4 +1,10 @@
 #!/usr/bin/env rake
+$:.push File.expand_path("../lib", __FILE__)
+require 'active_model'
+require 'active_record'
+require 'rails'
+require 'false_destroy'
+
 begin
   require 'bundler/setup'
 rescue LoadError
@@ -20,7 +26,7 @@ RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
 
-Bundler::GemHelper.install_tasks
+# Bundler::GemHelper.install_tasks
 
 require 'rake/testtask'
 
