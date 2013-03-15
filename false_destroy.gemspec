@@ -12,9 +12,6 @@ Gem::Specification.new do |s|
   s.description = "when mark a record deleted in DB, then run callback after_false_destroy like after_destroy in rails"
 
   s.required_rubygems_version = ">= 1.3.6"
-  s.add_dependency("active_record")
-  s.add_dependency("active_model")
-  s.add_dependency("rails")
   s.add_development_dependency("rspec")
 
   s.files         = Dir['README.md', 'VERSION', 'LICENSE.txt', 'Rakefile', 'lib/**/*']
