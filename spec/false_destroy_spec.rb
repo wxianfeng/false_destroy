@@ -12,5 +12,9 @@ describe FalseDestroy do
 		FalseDestroy.column_name = 'destroyed'
 		FalseDestroy.column_name.should == 'destroyed'
 	end
+
+	it "version" do 
+		p FalseDestroy::VERSION
+	end
 	
 end

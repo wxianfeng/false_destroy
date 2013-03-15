@@ -2,7 +2,8 @@ false_destroy
 ======================
 
 when mark a record deleted in DB, eg: 0 is not deleted, 1 is deleted
-then run callback after_false_destroy like after_destroy in rails.
+
+we can call `false_destroy`,then will run callback after_false_destroy like after_destroy in rails.
 
 ## Install
 
@@ -21,17 +22,15 @@ end
 
 orgunit = Orgunit.first
 orgunit.false_destroy
-
-=>
-Orgunit DB column deleted set to True
-column deleted_at set to Time.now
 ```
 
-## Cfg
+## Config
 
 you can config DB column_name and when_name as the db column name 
 
 column_name: destroyed mark column
+
+when_name: false destroy time
 
 ```ruby
 FalseDestroy.column_name = 'destroyed'
